@@ -47,8 +47,10 @@ public class Pizza {
         // your code goes here
         if (!finalBill) {
             String message = "Total Price: ";
-            if (this.cheeze)
+            if (this.cheeze) {
+                this.price = getPrice() + 80;
                 this.bill += "Extra Cheese Added: " + 80 + "\n";
+            }
             if (this.topping) {
                 int top = this.isVeg ? 70 : 120;
                 this.price = getPrice() + top;
